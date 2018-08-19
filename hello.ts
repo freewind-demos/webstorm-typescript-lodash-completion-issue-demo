@@ -1,3 +1,8 @@
-import {capitalize} from 'lodash';
+import * as _ from 'lodash'
 
-console.log("Hello " + capitalize("typescript") + "!");
+_
+
+
+
+
+console.log('Hello ' + _.capitalize('typescript') + '!')
