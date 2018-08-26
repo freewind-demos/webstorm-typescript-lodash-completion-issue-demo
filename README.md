@@ -31,6 +31,10 @@ Configuration Webstorm
 
 ![webstorm-lodash-work-4.jpg](./images/webstorm-lodash-work-4.jpg)
 
+It also works if we import lodash as `_`:
+
+![webstorm-lodash-work-as-underscore.jpg](./images/webstorm-lodash-work-as-underscore.jpg)
+
 It works but we have to do this manually, which is quite boring.
 
 What about VSCODE?

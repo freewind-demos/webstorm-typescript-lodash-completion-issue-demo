@@ -1,3 +1,3 @@
 import * as _ from 'lodash'
 
-console.log('Hello, ' + lodash.capitalize('typescript'))
+console.log('Hello, ' + _.capitalize('typescript'))
