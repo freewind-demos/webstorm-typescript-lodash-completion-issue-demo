@@ -1,8 +1,3 @@
-import * as _ from 'lodash'
+import * as lodash from 'lodash'
 
-_
-
-
-
-
-console.log('Hello ' + _.capitalize('typescript') + '!')
+console.log('Hello ' + lodash.capitalize('typescript') + '!')

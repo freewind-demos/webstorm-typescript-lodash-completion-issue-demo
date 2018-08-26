@@ -13,7 +13,15 @@ It will print `Hello, TypeScript!`
 To work with WebStorm completion
 --------------------------------
 
-如果想使用WebStorm的提示功能，有一点需要注意：
+如果想使用WebStorm的lodash提示功能，需要进行配置：
+
+![webstorm-lodash-1.jpg](./images/webstorm-lodash-1.jpg)
+
+安装完成后，确认多出了以下library:
+
+![webstorm-lodash-2.jpg](./images/webstorm-lodash-2.jpg)
+
+同时还需要注意：
 
 ```
 import * as lodash from 'lodash'
