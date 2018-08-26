@@ -1,42 +1,71 @@
-TypeScript Lodash Import All Demo
-=================================
+WebStorm TypeScript Lodash Completion Issue Demo
+================================================
 
-Import all methods from lodash rather than a single method.
+Can't find a way to make webstorm show lodash completion for typescript project with `tsconfig.json`.
+
+Webstorm Verion
+---------------
 
 ```
-npm install
-npx ts-node hello.ts
+WebStorm 2018.2.2
+Build #WS-182.4129.32, built on August 21, 2018
+Licensed to WebStorm Evaluator
+Expiration date: September 3, 2018
+JRE: 1.8.0_152-release-1248-b8 x86_64
+JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
+macOS 10.13.3
 ```
 
-It will print `Hello, TypeScript!`
+Project WITHOUT tsconfig.json
+-----------------------------
 
-To work with WebStorm completion
---------------------------------
-
-如果想使用WebStorm的lodash提示功能，需要进行配置：
+If there is no `tsconfig.json` file (you can delete/rename it from this project),
+we can configure webstorm to complete lodash as following steps:
 
 ![webstorm-lodash-1.jpg](./images/webstorm-lodash-1.jpg)
 
-安装完成后，确认多出了以下library:
+Make sure the `@types/lodash` library is added:
 
 ![webstorm-lodash-2.jpg](./images/webstorm-lodash-2.jpg)
 
-同时还需要注意：
+At the mean time, in your typescript file, you should do:
 
 ```
 import * as lodash from 'lodash'
 ```
 
-这里的`* as lodash`不能写成`* as _`，否则什么也提示不出来。
+You will get lodash completion:
 
 ![as-lodash](./images/as-lodash.jpg)
 
+
+### avoid `import * as _`
+
+If you import lodash as `_`
+
+```
+import * as _ from 'lodash'
+```
+
+the completion will not work:
+
 ![as-underscore](./images/as-underscore.jpg)
 
-原因在于，如果我们`* as _`，WebStorm会错误的把`_`指向lodash中已经定义了的`_`:
+The reason is webstorm will treat the `_` as a `const` or `namespace` whose name is `_`:
 
 ![underscore](./images/underscore.jpg)
 
 ![underscore-def](./images/underscore-def.jpg)
 
-所以我们需要使用一个不同的名字。
+So we need a different name.
+
+Project WITH tsconfig.json
+--------------------------
+
+Now let's add the file `tsconfig.json`, and give it empty configuration `{}`.
+
+You will find the lodash completion is broken, there is no completion:
+
+![webstorm-lodash-no-completion.jpg](./images/webstorm-lodash-no-completion.jpg)
+
+No matter how I configure the `tsconfig.json` or webstorm itself, I can't find a way to make the completion work again.
