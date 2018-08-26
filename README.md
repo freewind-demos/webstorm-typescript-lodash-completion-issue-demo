@@ -5,8 +5,8 @@ WebStorm TypeScript Lodash Completion Issue Demo
 
 Update: found a way, but need some boring manual work. (Looking for a simpler way)
 
-Webstorm Verion
----------------
+Webstorm Version
+----------------
 
 Latest webstorm version (till 2018-08-26):
 
