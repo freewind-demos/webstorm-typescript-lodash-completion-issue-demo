@@ -70,7 +70,19 @@ You will find the lodash completion is broken, there is no completion:
 
 ![webstorm-lodash-no-completion.jpg](./images/webstorm-lodash-no-completion.jpg)
 
-No matter how I configure the `tsconfig.json` or webstorm itself, I can't find a way to make the completion work again.
+<s>No matter how I configure the `tsconfig.json` or webstorm itself, I can't find a way to make the completion work again.</s>
+
+I found a way to make lodash completion with `tsconfig.json` work:
+
+![webstorm-lodash-work-1.jpg](./images/webstorm-lodash-work-1.jpg)
+
+![webstorm-lodash-work-2.jpg](./images/webstorm-lodash-work-2.jpg)
+
+![webstorm-lodash-work-3.jpg](./images/webstorm-lodash-work-3.jpg)
+
+![webstorm-lodash-work-4.jpg](./images/webstorm-lodash-work-4.jpg)
+
+It works but we have to do this manually, which is quite boring.
 
 What about VSCODE?
 ------------------
