@@ -6,6 +6,8 @@ Can't find a way to make webstorm show lodash completion for typescript project 
 Webstorm Verion
 ---------------
 
+Latest webstorm version (till 2018-08-26):
+
 ```
 WebStorm 2018.2.2
 Build #WS-182.4129.32, built on August 21, 2018
@@ -69,3 +71,10 @@ You will find the lodash completion is broken, there is no completion:
 ![webstorm-lodash-no-completion.jpg](./images/webstorm-lodash-no-completion.jpg)
 
 No matter how I configure the `tsconfig.json` or webstorm itself, I can't find a way to make the completion work again.
+
+What about VSCODE?
+------------------
+
+I use vscode to open this project. Without ANY configuration, the completion is working perfect.
+
+![vscode.jpg](./images/vscode.jpg)
