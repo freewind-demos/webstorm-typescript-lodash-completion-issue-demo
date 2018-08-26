@@ -30,20 +30,20 @@ Make sure the `@types/lodash` library is added:
 
 ![webstorm-lodash-2.jpg](./images/webstorm-lodash-2.jpg)
 
-At the mean time, in your typescript file, you should do:
+At the mean time, in typescript file, we should do:
 
 ```
 import * as lodash from 'lodash'
 ```
 
-You will get lodash completion:
+We will get lodash completion:
 
 ![as-lodash](./images/as-lodash.jpg)
 
 
 ### avoid `import * as _`
 
-If you import lodash as `_`
+But if we import lodash as `_`
 
 ```
 import * as _ from 'lodash'
@@ -61,8 +61,8 @@ The reason is webstorm will treat the `_` as a `const` or `namespace` whose name
 
 So we need a different name.
 
-Project WITH tsconfig.json
---------------------------
+Project WITH `tsconfig.json`
+----------------------------
 
 Now let's add the file `tsconfig.json`, and give it empty configuration `{}`.
 
