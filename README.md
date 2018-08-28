@@ -7,7 +7,7 @@ Update:
 
 - <s>[manually config, but can't work with `tsconfig.json`](./webstorm-config-global-library.md)</s>
 - <s>[can work with `tsconfig.json`, but need some boring manual work.](./webstorm-config-project-library.md)</s>
-- found real problem!
+- found the real problem!
 
 The real problem
 ----------------
