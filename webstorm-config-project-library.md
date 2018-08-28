@@ -1,3 +1,13 @@
+Webstorm config lodash library manually
+=======================================
+
+NOT needed.
+
+NOT needed.
+
+NOT needed.
+
+Webstorm handles everything perfectly if you use `npm install` not `cnpm install`.
 
 Configuration Webstorm
 ----------------------

@@ -7,7 +7,7 @@ NOT needed.
 
 NOT needed.
 
-Webstorm handles everything perfectly if you use `npm install`.
+Webstorm handles everything perfectly if you use `npm install` not `cnpm install`.
 
 Download by Webstorm
 --------------------
