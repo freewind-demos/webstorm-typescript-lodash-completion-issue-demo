@@ -3,7 +3,48 @@ WebStorm TypeScript Lodash Completion Issue Demo
 
 <s>Can't find a way to make webstorm show lodash completion for typescript project with `tsconfig.json`.</s>
 
-Update: found a way, but need some boring manual work. (Looking for a simpler way)
+Update:
+
+- <s>[manually config, but can't work with `tsconfig.json`](./webstorm-config-global-library.md)</s>
+- <s>[can work with `tsconfig.json`, but need some boring manual work.](./webstorm-config-project-library.md)</s>
+- found real problem!
+
+The real problem
+----------------
+
+Finally, I found Webstorm can complete lodash perfectly out of box, without any config.
+
+![webstorm-lodash-perfect](./images/webstorm-lodash-perfect.jpg)
+
+The problem is I was using `cnpm` to install the dependencies (which uses Chinese taobao npm registry, is much faster for me).
+But seems like Webstorm doesn't work well with the `node_modules` files it downloads.
+
+Now I use `npm install`, everything works.
+
+Versions I use:
+
+- `npm`: `6.3.0`
+- `cnpm`: latest `6.0.0`, with internal `npm 6.4.0`
+
+Version details are here: <./npm-issue-data/README.md>, and I also packaged the `node_modules` they downloaded:
+
+- `npm-issue-data/cnpm-6.0.0-node_modules.tar.gz`
+- `npm-issue-data/npm-6.3.0-node_modules.tar.gz`
+
+Suggestions
+-----------
+
+Avoid using `cnpm` if you found something strange.
+
+If you want to download dependencies from some mirror faster, you can use something like:
+
+```
+npm --registry https://registry.npm.taobao.org install
+```
+
+Which works well with Webstorm.
+
+If you want to type less, you can create an alias `cnpm` for `npm --registry https://registry.npm.taobao.org`
 
 Webstorm Version
 ----------------
@@ -20,40 +61,9 @@ JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
 macOS 10.13.3
 ```
 
-Configuration Webstorm
-----------------------
-
-Install dependencies first:
-
-```
-npm install
-```
-
-Then add the `node_modules/@types/lodash` as a javascript library to current project:
-
-![webstorm-lodash-work-1.jpg](./images/webstorm-lodash-work-1.jpg)
-
-Choose the `node_modules/@types/lodash` directory of current project:
-
-![webstorm-lodash-work-2.jpg](./images/webstorm-lodash-work-2.jpg)
-
-Make sure the `lodash` library is added:
-
-![webstorm-lodash-work-3.jpg](./images/webstorm-lodash-work-3.jpg)
-
-Try:
-
-![webstorm-lodash-work-4.jpg](./images/webstorm-lodash-work-4.jpg)
-
-It also works if we import lodash as `_`:
-
-![webstorm-lodash-work-as-underscore.jpg](./images/webstorm-lodash-work-as-underscore.jpg)
-
-It works but we have to do this manually, which is quite boring.
-
 What about VSCODE?
 ------------------
 
-I use vscode to open this project. Without ANY configuration, the completion is working perfect.
+I use vscode to open this project. Without any configuration, the completion is also working perfect.
 
 ![vscode.jpg](./images/vscode.jpg)
