@@ -16,7 +16,7 @@ Finally, I found Webstorm can complete lodash perfectly out of box, without any 
 
 ![webstorm-lodash-perfect](./images/webstorm-lodash-perfect.jpg)
 
-The problem is I was using `cnpm` to install the dependencies (which uses Chinese taobao npm registry, is much faster for me).
+The problem is I was using `cnpm` to install the dependencies (Installed by `npm install -g cnpm`, which uses Chinese taobao npm registry, is much faster for me).
 But seems like Webstorm doesn't work well with the `node_modules` files it downloads.
 
 Now I use `npm install`, everything works.
