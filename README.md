@@ -26,7 +26,7 @@ Versions I use:
 - `npm`: `6.3.0`
 - `cnpm`: latest `6.0.0`, with internal `npm 6.4.0`
 
-Version details are here: <./npm-issue-data/README.md>, and I also packaged the `node_modules` they downloaded:
+Version details are [here](./npm-issue-data/README.md), and I also packaged the `node_modules` they downloaded:
 
 - `npm-issue-data/cnpm-6.0.0-node_modules.tar.gz`
 - `npm-issue-data/npm-6.3.0-node_modules.tar.gz`
